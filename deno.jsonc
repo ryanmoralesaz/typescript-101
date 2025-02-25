@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "start": "deno run --allow-read src/main.ts",
+    "dev": "deno run --watch --allow-read src/main.ts",
+    "test": "deno test"
+  },
+  "compilerOptions": {
+    "strict": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "TypeScript Algorithms with Deno",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/dhoeric/features/act:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "denoland.vscode-deno",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+        "visualstudioexptteam.vscodeintellicode"
+      ],
+      "settings": {
+        "deno.enable": true,
+        "deno.lint": true,
+        "deno.unstable": true,
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  },
+  "postCreateCommand": "echo 'Installing Deno v2...' && curl -fsSL https://deno.land/install.sh | DENO_INSTALL=/usr/local sh -s v2.0.0 && echo 'Updating npm to 11.1...' && npm install -g npm@11.1 && echo 'Installing TypeScript...' && npm install -g typescript ts-node"
+}
